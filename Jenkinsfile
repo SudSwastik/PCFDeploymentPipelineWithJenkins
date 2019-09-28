@@ -6,7 +6,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                export M2_HOME=/usr/local/Cellar/maven/3.6.1 # your Mavan home path
+                export M2_HOME=/usr/local/Cellar/maven/3.6.1
                 export PATH=$PATH:$M2_HOME/bin
                     sh 'mvn -v'
                     sh 'mvn clean package'
